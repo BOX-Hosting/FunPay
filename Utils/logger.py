@@ -5,6 +5,7 @@ from colorama import Fore, Back, Style
 import logging.handlers
 import logging
 import re
+import logging.config
 
 
 LOG_COLORS = {
@@ -149,3 +150,9 @@ LOGGER_CONFIG = {
         }
     }
 }
+
+def init_logger():
+    """
+    Инициализирует логгер заново.
+    """
+    logging.config.dictConfig(LOGGER_CONFIG)
