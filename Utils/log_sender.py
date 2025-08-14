@@ -53,7 +53,7 @@ def monitor_logs():
                     send_log_file(token)
         except Exception as e:
             logging.getLogger("main").exception(f"Мониторинг логов — ошибка: {e}")
-        time.sleep(CHECK_INTERVAL_HOURS)
+        time.sleep(CHECK_INTERVAL_HOURS * 3600)
  
         
 def start_monitoring():
